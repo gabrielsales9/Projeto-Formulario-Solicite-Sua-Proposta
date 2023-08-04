@@ -34,7 +34,7 @@
                 <div class="form-text">
                     <label for="job">Qual é o seu cargo na empresa? <span>*</span></label>
                     <select name="job" required>
-                        <option value="other"></option>
+                        <option value="other">Outro</option>
                         <option value="diretor_de_tecnologia">Diretor de Tecnologia</option>
                         <option value="cto">CTO</option>
                         <option value="ceo">CEO</option>
@@ -44,7 +44,6 @@
                 <div class="form-text">
                     <label for="employees">Quantos funcionários tem em sua empresa? <span>*</span></label>
                     <select name="employees" required>
-                        <option value=""></option>
                         <option value="max_dez">1-10 funcionários</option>
                         <option value="max_cinq">11-50 funcionários</option>
                         <option value="max_cem">51-100 funcionários</option>
@@ -59,12 +58,11 @@
                 </div>
                 <div class="form-text">
                     <label for="budget">Qual é o seu budget para este projeto? <span>*</span></label>
-                    <input type="number" name="budget" required
-                        placeholder="Escreva qual é o valor que planeja gastar neste projeto">
+                    <input type="number" name="budget" min="1" required placeholder="Escreva qual é o valor que planeja gastar neste projeto">
                 </div>
                 <div class="form-text">
                     <label for="hours">Qual a estimativa de horas por mês deste projeto? <span>*</span></label>
-                    <input type="number" name="hours" required>
+                    <input type="number" min="100" name="hours" required placeholder="Escreva qual a estimativa de horas por mês de seu projeto">
                 </div>
                 <div class="form-date">
                     <label for="start">Até qual data você precisa que o(s) recurso(s) comece(m)? <span>*</span></label>
@@ -80,6 +78,10 @@
                         <div>
                             <input type="radio" value="remoto" name="model" id="remoto">
                             <label for="remoto">Remoto</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="hibrido" name="model" id="hibrido">
+                            <label for="hibrido">Hibrido</label>
                         </div>
                     </div>
                 </div>
@@ -129,8 +131,8 @@
                     </div>
                 </div>
                 <div class="form-document">
-                    <label for="document">Anexe o escopo de seu projeto: <span>*</span></label>
-                    <input type="file" name="document" required>
+                    <label for="document">Anexe o escopo de seu projeto:</label>
+                    <input type="file" name="document">
                 </div>
                 <div class="btn_submit">
                     <input type="submit" value="Enviar">
@@ -139,4 +141,5 @@
         </div>
     </div>
 </body>
+
 </html>
